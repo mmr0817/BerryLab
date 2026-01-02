@@ -1,0 +1,67 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 登录状态显示 -->
+  <view wx:if="{{isLoggedIn}}" class="user-section">
+    <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <view class="user-info">
+      <text class="nickname">{{userInfo.nickName || '未设置昵称'}}</text>
+      <text class="band-name" wx:if="{{userInfo.bandName}}">乐队：{{userInfo.bandName}}</text>
+      <text class="hint" wx:else>您还未设置乐队名称</text>
+    </view>
+  </view>
+
+  <!-- 未登录状态 -->
+  <view wx:else class="login-section">
+    <image class="logo" src="/images/music-logo.png"></image>
+    <text class="welcome">欢迎来到乐队管理</text>
+    <text class="desc">登录后可以创建和管理您的乐队信息</text>
+    
+    <!-- 登录按钮 -->
+    <button 
+      class="login-btn" 
+      wx:if="{{!isLoggedIn}}"
+      open-type="getUserInfo"
+      bindgetuserinfo="onGetUserInfo"
+    >
+      微信一键登录
+    </button>
+    
+  </view>
+
+  <!-- 功能入口 -->
+  <view wx:if="{{isLoggedIn}}" class="action-section">
+    <navigator url="/pages/profile/profile" open-type="navigate" class="action-card">
+      <view class="card-content">
+        <view class="icon">🎸</view>
+        <text class="title">管理乐队资料</text>
+        <text class="subtitle">设置乐队名称、介绍等</text>
+      </view>
+      <view class="arrow">›</view>
+    </navigator>
+    
+    <view class="action-card" bindtap="checkMyBand">
+      <view class="card-content">
+        <view class="icon">📁</view>
+        <text class="title">查看我的乐队</text>
+        <text class="subtitle">查看乐队成员和作品</text>
+      </view>
+      <view class="arrow">›</view>
+    </view>
+    
+    <view class="action-card" bindtap="shareApp">
+      <view class="card-content">
+        <view class="icon">📤</view>
+        <text class="title">分享给队友</text>
+        <text class="subtitle">邀请乐队成员加入</text>
+      </view>
+      <view class="arrow">›</view>
+    </view>
+  </view>
+
+  <!-- 登录提示 -->
+  <view wx:if="{{!isLoggedIn}}" class="tips">
+    <!-- <text>• 登录后数据将永久保存</text>
+    <text>• 支持多设备同步</text>
+    <text>• 免费使用所有功能</text> -->
+  </view>
+</view>

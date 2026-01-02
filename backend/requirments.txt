@@ -1,0 +1,8 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+Flask-SQLAlchemy==3.0.5
+Flask-JWT-Extended==4.5.2
+Flask-Caching==2.0.2
+requests==2.31.0
+redis==5.0.1  # 可选，用于缓存和Session存储
+PyJWT==2.8.0

@@ -1,0 +1,176 @@
+/* pages/index/index.wxss */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20rpx;
+}
+
+/* 用户信息区域 */
+.user-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4rpx 20rpx rgba(139, 69, 19, 0.1);
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  border: 4rpx solid #8B4513;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.nickname {
+  display: block;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.band-name {
+  display: block;
+  font-size: 28rpx;
+  color: #8B4513;
+  background: #FFF8F0;
+  padding: 8rpx 16rpx;
+  border-radius: 8rpx;
+  margin-top: 10rpx;
+}
+
+.hint {
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+/* 登录区域 */
+.login-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 60rpx 40rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 150rpx;
+  height: 150rpx;
+  margin-bottom: 30rpx;
+}
+
+.welcome {
+  display: block;
+  font-size: 38rpx;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15rpx;
+}
+
+.desc {
+  display: block;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 50rpx;
+}
+
+/* 登录按钮 */
+.login-btn {
+  background: #000000;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 20rpx 0;
+}
+
+.login-btn.secondary {
+  background: #f0f0f0;
+  color: #666;
+}
+
+/* 功能区域 */
+.action-section {
+  margin-top: 40rpx;
+}
+
+.action-card {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2rpx 12rpx rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+
+.action-card:active {
+  transform: scale(0.98);
+  background: #f8f8f8;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.icon {
+  font-size: 48rpx;
+  margin-bottom: 15rpx;
+}
+
+.title {
+  display: block;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.subtitle {
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.arrow {
+  font-size: 40rpx;
+  color: #ccc;
+  margin-left: 20rpx;
+}
+
+/* 提示区域 */
+.tips {
+  background: rgba(139, 69, 19, 0.05);
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-top: 50rpx;
+}
+
+.tips text {
+  display: block;
+  font-size: 26rpx;
+  color: #000000;
+  margin-bottom: 10rpx;
+  padding-left: 20rpx;
+  position: relative;
+}
+
+.tips text::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #8B4513;
+}

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "BerryLab",
+  "navigationBarBackgroundColor": "#FF66FF",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#f8f5f0",
+  "onReachBottomDistance": 50,
+  "disableScroll": false
+}
